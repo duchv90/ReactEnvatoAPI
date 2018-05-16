@@ -9,6 +9,7 @@ import RootContainer from './containers/RootContainer';
 import HomePage from './components/pages/HomePage';
 import LoginPage from './components/pages/LoginPage';
 import ReportPage from './components/pages/ReportPage';
+import PurchasesPage from './components/pages/PurchasesPage';
 
 class App extends React.Component {
   componentWillMount() {
@@ -39,6 +40,12 @@ class App extends React.Component {
           path={`${process.env.PUBLIC_URL}/sales/report`}
           exact
           component={() => <RootContainer MainContent={ReportPage} />}
+        />
+        <PrivateRouter
+          location={location}
+          path={`${process.env.PUBLIC_URL}/purchasecode`}
+          exact
+          component={() => <RootContainer MainContent={PurchasesPage} />}
         />
       </div>
     );

@@ -40,5 +40,16 @@ export default {
           }
         }
       ).then(res => res.data)
+  },
+  purchases: {
+    getSale: params =>
+      axios.get(
+        `${PATH.PATH_API_V3}author/sale`,
+        {
+          'params': {
+            code: params
+          }
+        }
+      ).then(res => res.data)
   }
 };
